@@ -1,0 +1,62 @@
+.business-card {
+  display: flex;
+  width: 500px;
+  height: 280px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Front of the card */
+.card-front {
+  background: #2e7d32;
+  color: #fff;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-front .logo {
+  width: 90px;
+  margin-bottom: 12px;
+}
+
+.card-front h2 {
+  font-size: 1.6rem;
+  margin: 8px 0;
+}
+
+.card-front p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Back of the card */
+.card-back {
+  background: #ffffff;
+  color: #333;
+  flex: 1;
+  padding: 20px;
+}
+
+.card-back h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.card-back a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+.qr {
+  width: 90px;
+  margin-top: 15px;
+}
