@@ -12,10 +12,23 @@
     }
 
     header {
-      background: #0073e6;
-      color: white;
+      background: #ffffff;
       padding: 20px;
-      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #333;
+      margin: 0;
     }
 
     .tour-container {
@@ -66,7 +79,11 @@
 </head>
 <body>
 
-  <header>Virtual Office Tour</header>
+  <header>
+    <!-- Replace the src with your logo file path -->
+    <img src="home_office_logo.png" alt="Virtual Office Tour Logo">
+    <h1>Virtual Office Tour</h1>
+  </header>
 
   <div class="tour-container">
     <img id="tourImage" class="tour-image" src="https://picsum.photos/id/1011/800/450" alt="Office View">
