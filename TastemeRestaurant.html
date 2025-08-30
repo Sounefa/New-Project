@@ -21,6 +21,10 @@
         }
         .qrcode img {
             width: 150px; /* adjust size */
+            transition: transform 0.2s ease-in-out;
+        }
+        .qrcode img:hover {
+            transform: scale(1.05); /* small hover zoom */
         }
     </style>
 </head>
@@ -77,8 +81,10 @@
 
         <!-- QR Code section -->
         <div class="qrcode">
-            <p>Scan our QR Code:</p>
-            <img src="Vegan Ddelights QRCode.png" alt="Vegan Delights QR Code">
+            <p>Scan our QR Code or click it:</p>
+            <a href="https://sounefa.github.io/New-Project/" target="_blank">
+                <img src="Vegan Ddelights QRCode.png" alt="Vegan Delights QR Code">
+            </a>
         </div>
     </section>
 
