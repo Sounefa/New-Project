@@ -10,6 +10,7 @@
     html { scroll-behavior: smooth; }
     .fade-in { animation: fadeIn 1.5s ease-in-out forwards; opacity: 0; }
     @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    .glass { background: rgba(255,255,255,0.15); backdrop-filter: blur(15px); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -24,7 +25,7 @@
       </div>
       <nav class="space-x-6 text-gray-700 font-medium">
         <a href="#intro" class="hover:text-indigo-600">Home</a>
-        <a href="#tour" class="hover:text-indigo-600">Tour</a>
+        <a href="#partners" class="hover:text-indigo-600">Partners</a>
         <a href="#customers" class="hover:text-indigo-600">Customers</a>
         <a href="#employees" class="hover:text-indigo-600">Employees</a>
         <a href="#recruitment" class="hover:text-indigo-600">Careers</a>
@@ -34,64 +35,69 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="intro" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-700 relative text-center">
+  <section id="intro" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-800 relative text-center">
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="relative z-10 px-6 fade-in">
-      <img src="bf419794-df54-43a6-8a46-d357e869187d.png" alt="Kingdom Mindset Logo" class="mx-auto h-28 mb-8 shadow-2xl rounded">
-      <h2 class="text-5xl font-extrabold text-white mb-6">Virtual Office Tour</h2>
-      <p class="text-lg max-w-2xl mx-auto mb-8 text-gray-200">Step inside our luxurious workspace designed to inspire collaboration, innovation, and growth. Whether you’re a customer or an employee, you’ll find an environment where success thrives.</p>
-      <a href="#tour" class="px-8 py-4 bg-white text-indigo-700 font-semibold rounded-xl shadow-lg hover:bg-indigo-100 transition">Start Tour</a>
+      <img src="bf419794-df54-43a6-8a46-d357e869187d.png" alt="Kingdom Mindset Logo" class="mx-auto h-28 mb-8 shadow-2xl rounded-lg">
+      <h2 class="text-5xl font-extrabold text-white mb-6">Welcome to Kingdom Mindset</h2>
+      <p class="text-lg max-w-2xl mx-auto mb-8 text-gray-200">Experience a workplace of luxury, innovation, and growth. Designed for our valued partners, customers, and employees — where success and excellence meet.</p>
+      <a href="#partners" class="px-8 py-4 bg-white text-indigo-700 font-semibold rounded-xl shadow-lg hover:bg-indigo-100 transition">Discover More</a>
     </div>
   </section>
 
-  <!-- Virtual Tour Section -->
-  <section id="tour" class="max-w-7xl mx-auto px-6 py-24">
-    <h3 class="text-4xl font-bold text-center mb-12">Explore Our Office</h3>
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div class="space-y-6">
-        <h4 class="text-2xl font-semibold text-indigo-700">Immersive 360° Tour</h4>
-        <p class="text-gray-700">Navigate through modern meeting rooms, collaborative lounges, and private offices — all from the comfort of your screen. Experience the luxury and innovation that define Kingdom Mindset.</p>
-        <ul class="space-y-3">
-          <li><i class="fas fa-check-circle text-indigo-500"></i> 360° panoramic views</li>
-          <li><i class="fas fa-check-circle text-indigo-500"></i> Interactive hotspots with details</li>
-          <li><i class="fas fa-check-circle text-indigo-500"></i> Guided navigation system</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
-        <iframe class="w-full h-80" src="https://www.youtube.com/embed/Scxs7L0vhZ4" title="Virtual Office Tour Video" allowfullscreen></iframe>
+  <!-- Partners Section -->
+  <section id="partners" class="py-24 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-bold mb-10">Our Trusted Partners</h3>
+      <p class="max-w-3xl mx-auto text-gray-700 mb-12">At Kingdom Mindset, we believe in strong partnerships. Our partners empower us to deliver world-class services, innovation, and value to all stakeholders.</p>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="glass p-8 rounded-2xl shadow-lg">
+          <i class="fas fa-handshake text-4xl text-indigo-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">Collaboration</h4>
+          <p class="text-gray-600 mt-2">We collaborate with leading organizations to deliver innovative solutions.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl shadow-lg">
+          <i class="fas fa-globe text-4xl text-indigo-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">Global Reach</h4>
+          <p class="text-gray-600 mt-2">Our global partnerships expand opportunities across borders.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl shadow-lg">
+          <i class="fas fa-award text-4xl text-indigo-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">Excellence</h4>
+          <p class="text-gray-600 mt-2">We align with partners who share our commitment to excellence.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Customers Section -->
-  <section id="customers" class="bg-gray-100 py-24">
+  <section id="customers" class="py-24 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-4xl font-bold text-center mb-12">For Our Customers</h3>
       <div class="grid md:grid-cols-2 gap-12">
         <div>
-          <h4 class="text-2xl font-semibold text-indigo-700 mb-4">A Workspace That Works for You</h4>
-          <p class="text-gray-700 mb-6">Our spaces are designed with you in mind — from client-ready meeting rooms to innovation hubs that foster creativity.</p>
+          <h4 class="text-2xl font-semibold text-indigo-700 mb-4">Luxury Experience</h4>
+          <p class="text-gray-700 mb-6">Every detail of our office is designed with customers in mind — from premium lounges to high-tech conference rooms.</p>
           <ul class="space-y-3">
-            <li><i class="fas fa-star text-yellow-500"></i> Premium customer lounges</li>
-            <li><i class="fas fa-star text-yellow-500"></i> State-of-the-art technology</li>
             <li><i class="fas fa-star text-yellow-500"></i> Concierge-level hospitality</li>
+            <li><i class="fas fa-star text-yellow-500"></i> State-of-the-art facilities</li>
+            <li><i class="fas fa-star text-yellow-500"></i> Exclusive client events</li>
           </ul>
         </div>
         <div class="bg-white rounded-2xl shadow-lg p-6">
-          <h5 class="text-xl font-semibold mb-4">What Clients Say</h5>
-          <blockquote class="italic text-gray-600 mb-4">“The experience was seamless and impressive — Kingdom Mindset offices set a new standard for professional environments.”</blockquote>
-          <blockquote class="italic text-gray-600">“From virtual to physical, every detail reflects excellence and care.”</blockquote>
+          <h5 class="text-xl font-semibold mb-4">Client Testimonials</h5>
+          <blockquote class="italic text-gray-600 mb-4">“Kingdom Mindset set the standard for professional excellence.”</blockquote>
+          <blockquote class="italic text-gray-600">“From virtual to physical, everything exceeded expectations.”</blockquote>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Employees Section -->
-  <section id="employees" class="py-24 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50">
+  <section id="employees" class="py-24 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-4xl font-bold text-center mb-12">For Our Employees</h3>
       <div class="grid md:grid-cols-2 gap-12">
-        <!-- Login -->
         <div class="bg-white p-8 rounded-2xl shadow-lg">
           <h4 class="text-2xl font-semibold text-indigo-700 mb-4">Employee Login</h4>
           <form class="space-y-4">
@@ -100,11 +106,10 @@
             <button type="submit" class="w-full py-3 bg-indigo-700 text-white rounded-lg font-semibold hover:bg-indigo-800 transition">Login</button>
           </form>
         </div>
-        <!-- Resources -->
         <div>
           <h4 class="text-2xl font-semibold text-indigo-700 mb-4">Employee Resources</h4>
           <ul class="space-y-3 text-gray-700">
-            <li><i class="fas fa-file-alt text-indigo-600"></i> Employee Handbook & Policies</li>
+            <li><i class="fas fa-file-alt text-indigo-600"></i> Handbook & Policies</li>
             <li><i class="fas fa-calendar-check text-indigo-600"></i> Events & Activities</li>
             <li><i class="fas fa-users text-indigo-600"></i> Employee Directory</li>
             <li><i class="fas fa-lightbulb text-indigo-600"></i> Innovation Programs</li>
@@ -115,16 +120,17 @@
   </section>
 
   <!-- Recruitment Section -->
-  <section id="recruitment" class="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 py-24 relative text-center">
-    <div class="absolute inset-0 bg-black/40"></div>
+  <section id="recruitment" class="bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-700 py-24 relative text-center">
+    <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative z-10 max-w-5xl mx-auto px-6 fade-in">
       <img src="bf419794-df54-43a6-8a46-d357e869187d.png" alt="Kingdom Mindset Logo" class="mx-auto h-24 mb-8 rounded shadow-xl">
-      <h3 class="text-4xl font-bold text-white mb-6">Join Our Team</h3>
-      <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-10">We’re searching for passionate, innovative individuals to grow with us. Hear from our team and see why Kingdom Mindset is the place to build your career.</p>
+      <h3 class="text-4xl font-bold text-white mb-6">Join Our Professional Team</h3>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-10">We’re recruiting driven, innovative professionals. Watch the video below to learn about our culture and the next steps to join Kingdom Mindset.</p>
       <!-- Video -->
       <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
-        <iframe class="w-full h-96" src="https://www.youtube.com/embed/J---aiyznGQ" title="Join Our Team Video" allowfullscreen></iframe>
+        <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Recruitment Video" allowfullscreen></iframe>
       </div>
+      <p class="mt-6 text-gray-200">📌 Instructions: Submit your application with resume, cover letter, and references. Our HR team will review and contact qualified candidates.</p>
       <!-- CTA -->
       <a href="#contact" class="mt-10 inline-block px-8 py-4 bg-white text-indigo-700 font-semibold rounded-xl shadow-lg hover:bg-indigo-100 transition">Apply Now</a>
     </div>
@@ -133,12 +139,27 @@
   <!-- Contact Section -->
   <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
     <h3 class="text-4xl font-bold text-center mb-12">Get in Touch</h3>
-    <form class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow space-y-6">
-      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
-      <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
-      <textarea placeholder="Message" rows="5" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"></textarea>
-      <button type="submit" class="w-full py-3 bg-indigo-700 text-white font-semibold rounded-xl shadow hover:bg-indigo-800 transition">Send Message</button>
-    </form>
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <form class="bg-white p-8 rounded-2xl shadow space-y-6">
+        <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+        <textarea placeholder="Message" rows="5" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button type="submit" class="w-full py-3 bg-indigo-700 text-white font-semibold rounded-xl shadow hover:bg-indigo-800 transition">Send Message</button>
+      </form>
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <h4 class="text-2xl font-semibold text-indigo-700">Contact Details</h4>
+        <p><i class="fas fa-envelope text-indigo-500"></i> info@kingdommindset.com</p>
+        <p><i class="fas fa-phone text-indigo-500"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-globe text-indigo-500"></i> www.kingdommindset.com</p>
+        <p><i class="fas fa-map-marker-alt text-indigo-500"></i> 123 Innovation Blvd, New York, NY</p>
+        <!-- Google Maps -->
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <iframe class="w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9542943611!2d-74.00601568459438!3d40.71277597933092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzQ2LjAiTiA3NMKwMDAnMjIuMCJX!5e0!3m2!1sen!2sus!4v1616601234567" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
