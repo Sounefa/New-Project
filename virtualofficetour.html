@@ -1,11 +1,113 @@
-<!-- Kingdom Mindset Logo (SVG) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" class="h-16 w-auto">
-  <!-- Crown -->
-  <polygon points="50,100 80,40 110,100 140,40 170,100" 
-           fill="none" stroke="#1E3A8A" stroke-width="6" stroke-linejoin="round"/>
-  <circle cx="80" cy="40" r="6" fill="#1E3A8A"/>
-  <circle cx="140" cy="40" r="6" fill="#1E3A8A"/>
-  <!-- Text -->
-  <text x="200" y="70" font-family="Arial Black, sans-serif" font-size="28" fill="#1E3A8A">KINGDOM</text>
-  <text x="200" y="115" font-family="Arial Black, sans-serif" font-size="28" fill="#1E3A8A">MINDSET</text>
-</svg>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Office Tour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"/>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white/90 backdrop-blur-md shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">Virtual Office Tour</h1>
+      <nav class="space-x-6 text-gray-700 font-medium">
+        <a href="#intro" class="hover:text-indigo-600">Home</a>
+        <a href="#tour" class="hover:text-indigo-600">Tour</a>
+        <a href="#spaces" class="hover:text-indigo-600">Spaces</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="intro" class="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative text-center text-white px-6">
+      <h2 class="text-5xl font-extrabold mb-6">Step Inside Our Office</h2>
+      <p class="text-lg max-w-xl mx-auto mb-8">Take a virtual journey through our modern workplace. Discover inspiring spaces designed for collaboration, creativity, and productivity.</p>
+      <a href="#tour" class="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl shadow hover:bg-indigo-100 transition">Start Tour</a>
+    </div>
+  </section>
+
+  <!-- Interactive Tour Section -->
+  <section id="tour" class="max-w-7xl mx-auto px-6 py-24">
+    <h3 class="text-4xl font-bold text-center mb-12">Virtual Office Walkthrough</h3>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <h4 class="text-2xl font-semibold text-indigo-600">Immersive Experience</h4>
+        <p class="text-gray-700">Our virtual tour lets you explore different areas of the office as if you were there in person. Move between meeting rooms, collaborative lounges, and private offices.</p>
+        <ul class="space-y-3">
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Explore in 360° panoramic view</li>
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Interactive hotspots with details</li>
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Guided navigation option</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <iframe class="w-full h-80 rounded-2xl" src="https://www.youtube.com/embed/Scxs7L0vhZ4" title="Virtual Tour" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Spaces Showcase -->
+  <section id="spaces" class="bg-gray-100 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-4xl font-bold text-center mb-12">Explore Our Spaces</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
+          <img src="https://source.unsplash.com/600x400/?office,workspace" class="w-full h-48 object-cover" alt="Workspace"/>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Collaborative Lounge</h4>
+            <p class="text-gray-600">Designed for brainstorming sessions and teamwork with a modern and open design.</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
+          <img src="https://source.unsplash.com/600x400/?conference,room" class="w-full h-48 object-cover" alt="Conference"/>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Meeting Rooms</h4>
+            <p class="text-gray-600">Equipped with the latest technology for seamless virtual and in-person meetings.</p>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
+          <img src="https://source.unsplash.com/600x400/?office,modern" class="w-full h-48 object-cover" alt="Private Office"/>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Private Offices</h4>
+            <p class="text-gray-600">Quiet, comfortable spaces where you can focus and maximize productivity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
+    <h3 class="text-4xl font-bold text-center mb-12">Get in Touch</h3>
+    <form class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow space-y-6">
+      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+      <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+      <textarea placeholder="Message" rows="5" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow hover:bg-indigo-700 transition">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 Virtual Office Tour. All rights reserved.</p>
+      <div class="space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
