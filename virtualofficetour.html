@@ -3,47 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Virtual Office Tour</title>
+  <title>Virtual Office Tour - Kingdom Mindset</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 1.2s ease-in-out forwards; opacity: 0; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Navbar -->
   <header class="fixed w-full bg-white/90 backdrop-blur-md shadow z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600">Virtual Office Tour</h1>
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <!-- SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" class="h-10 w-auto">
+          <polygon points="50,100 80,40 110,100 140,40 170,100" fill="none" stroke="#1E3A8A" stroke-width="6" stroke-linejoin="round"/>
+          <circle cx="80" cy="40" r="6" fill="#1E3A8A"/>
+          <circle cx="140" cy="40" r="6" fill="#1E3A8A"/>
+        </svg>
+        <h1 class="text-2xl font-bold text-indigo-700">Kingdom Mindset</h1>
+      </div>
       <nav class="space-x-6 text-gray-700 font-medium">
         <a href="#intro" class="hover:text-indigo-600">Home</a>
         <a href="#tour" class="hover:text-indigo-600">Tour</a>
         <a href="#spaces" class="hover:text-indigo-600">Spaces</a>
+        <a href="#customers" class="hover:text-indigo-600">Customers</a>
+        <a href="#employees" class="hover:text-indigo-600">Employees</a>
         <a href="#contact" class="hover:text-indigo-600">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="intro" class="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative">
+  <!-- Hero -->
+  <section id="intro" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 relative text-center">
     <div class="absolute inset-0 bg-black/40"></div>
-    <div class="relative text-center text-white px-6">
-      <h2 class="text-5xl font-extrabold mb-6">Step Inside Our Office</h2>
-      <p class="text-lg max-w-xl mx-auto mb-8">Take a virtual journey through our modern workplace. Discover inspiring spaces designed for collaboration, creativity, and productivity.</p>
+    <div class="relative z-10 px-6 fade-in">
+      <h2 class="text-5xl font-extrabold text-white mb-6">Welcome to the Virtual Office Tour</h2>
+      <p class="text-lg max-w-xl mx-auto mb-8 text-gray-200">Experience the workplace of tomorrow — designed to inspire, connect, and empower our community.</p>
       <a href="#tour" class="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl shadow hover:bg-indigo-100 transition">Start Tour</a>
     </div>
   </section>
 
-  <!-- Interactive Tour Section -->
+  <!-- Virtual Tour Section -->
   <section id="tour" class="max-w-7xl mx-auto px-6 py-24">
-    <h3 class="text-4xl font-bold text-center mb-12">Virtual Office Walkthrough</h3>
+    <h3 class="text-4xl font-bold text-center mb-12">Interactive Virtual Walkthrough</h3>
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="space-y-6">
         <h4 class="text-2xl font-semibold text-indigo-600">Immersive Experience</h4>
-        <p class="text-gray-700">Our virtual tour lets you explore different areas of the office as if you were there in person. Move between meeting rooms, collaborative lounges, and private offices.</p>
+        <p class="text-gray-700">Explore different areas of our office with 360° views, interactive hotspots, and guided navigation.</p>
         <ul class="space-y-3">
-          <li><i class="fas fa-check-circle text-indigo-500"></i> Explore in 360° panoramic view</li>
-          <li><i class="fas fa-check-circle text-indigo-500"></i> Interactive hotspots with details</li>
-          <li><i class="fas fa-check-circle text-indigo-500"></i> Guided navigation option</li>
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Panoramic 360° experience</li>
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Hotspots with office details</li>
+          <li><i class="fas fa-check-circle text-indigo-500"></i> Navigation map for easy flow</li>
         </ul>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg">
@@ -52,34 +67,81 @@
     </div>
   </section>
 
-  <!-- Office Spaces Showcase -->
+  <!-- Spaces Showcase -->
   <section id="spaces" class="bg-gray-100 py-24">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-4xl font-bold text-center mb-12">Explore Our Spaces</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card -->
         <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="https://source.unsplash.com/600x400/?office,workspace" class="w-full h-48 object-cover" alt="Workspace"/>
+          <img src="https://source.unsplash.com/600x400/?workspace,team" class="w-full h-48 object-cover" alt="Collaborative"/>
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Collaborative Lounge</h4>
-            <p class="text-gray-600">Designed for brainstorming sessions and teamwork with a modern and open design.</p>
+            <p class="text-gray-600">Perfect for brainstorming sessions and teamwork.</p>
           </div>
         </div>
-        <!-- Card -->
         <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="https://source.unsplash.com/600x400/?conference,room" class="w-full h-48 object-cover" alt="Conference"/>
+          <img src="https://source.unsplash.com/600x400/?conference,office" class="w-full h-48 object-cover" alt="Conference"/>
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Meeting Rooms</h4>
-            <p class="text-gray-600">Equipped with the latest technology for seamless virtual and in-person meetings.</p>
+            <p class="text-gray-600">Equipped with modern technology for hybrid work.</p>
           </div>
         </div>
-        <!-- Card -->
         <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden">
-          <img src="https://source.unsplash.com/600x400/?office,modern" class="w-full h-48 object-cover" alt="Private Office"/>
+          <img src="https://source.unsplash.com/600x400/?office,modern" class="w-full h-48 object-cover" alt="Private"/>
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Private Offices</h4>
-            <p class="text-gray-600">Quiet, comfortable spaces where you can focus and maximize productivity.</p>
+            <p class="text-gray-600">Quiet spaces for focus and productivity.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Section -->
+  <section id="customers" class="max-w-7xl mx-auto px-6 py-24">
+    <h3 class="text-4xl font-bold text-center mb-12">For Our Customers</h3>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h4 class="text-2xl font-semibold text-indigo-600 mb-4">Why Partner With Us?</h4>
+        <p class="text-gray-700 mb-6">Our office is more than just a workspace — it’s a hub of innovation and collaboration where customer success comes first.</p>
+        <ul class="space-y-3">
+          <li><i class="fas fa-star text-yellow-500"></i> Dedicated customer lounges</li>
+          <li><i class="fas fa-star text-yellow-500"></i> Hybrid meeting experiences</li>
+          <li><i class="fas fa-star text-yellow-500"></i> Access to innovation labs</li>
+        </ul>
+      </div>
+      <!-- Testimonials Carousel -->
+      <div class="bg-white shadow rounded-2xl p-6">
+        <h5 class="text-xl font-semibold mb-4">What Our Customers Say</h5>
+        <div class="space-y-4">
+          <blockquote class="italic text-gray-600">“The virtual tour gave me confidence before visiting in person — everything felt welcoming and professional.”</blockquote>
+          <blockquote class="italic text-gray-600">“Modern spaces, friendly staff, and great collaboration rooms!”</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Employee Section -->
+  <section id="employees" class="bg-indigo-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-4xl font-bold text-center mb-12">For Our Employees</h3>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-2xl shadow">
+          <h4 class="text-2xl font-semibold text-indigo-700 mb-4">Employee Login</h4>
+          <form class="space-y-4">
+            <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+            <input type="password" placeholder="Password" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"/>
+            <button type="submit" class="w-full py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">Login</button>
+          </form>
+        </div>
+        <div>
+          <h4 class="text-2xl font-semibold text-indigo-700 mb-4">Employee Resources</h4>
+          <ul class="space-y-3 text-gray-700">
+            <li><i class="fas fa-file-alt text-indigo-600"></i> Company Policies & Handbook</li>
+            <li><i class="fas fa-calendar-check text-indigo-600"></i> Events & Team Building Activities</li>
+            <li><i class="fas fa-users text-indigo-600"></i> Employee Directory</li>
+            <li><i class="fas fa-lightbulb text-indigo-600"></i> Innovation Programs</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -97,16 +159,32 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-8">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-      <p>&copy; 2025 Virtual Office Tour. All rights reserved.</p>
-      <div class="space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Kingdom Mindset</h4>
+        <p class="text-gray-400">Empowering innovation, collaboration, and growth through inspiring workspaces.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#tour" class="hover:text-white">Tour</a></li>
+          <li><a href="#spaces" class="hover:text-white">Spaces</a></li>
+          <li><a href="#customers" class="hover:text-white">Customers</a></li>
+          <li><a href="#employees" class="hover:text-white">Employees</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
+    <div class="text-center text-gray-500 mt-8">&copy; 2025 Kingdom Mindset. All rights reserved.</div>
   </footer>
 
 </body>
